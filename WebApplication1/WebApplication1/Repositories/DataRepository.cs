@@ -109,6 +109,7 @@ namespace WebApplication1.Repositories
             if (UnitId > 0 && data.Longitude > 0 && data.Latitude > 0)
             {
                 listData.Add(data);
+                Log.Information("UpdateData: {data}", data.ToString());
             }
             return await Task.FromResult(data);
         }
